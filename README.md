@@ -8,7 +8,6 @@ git commit -m "{comment}"
 git branch {feature-branch}
 git checkout {feature-branch}
 git push --set-upstream origin {feature-branch}
-git checkout master
 ```
 
 # resets master branch with origin branch in the server
