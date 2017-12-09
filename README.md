@@ -27,7 +27,7 @@ git merge {feature-branch}
 git rebase -i HEAD~2
 ```
 
-After running command It'll ask you to what to do with commits. In order to make changes you need to use vi like editor and change pick or squash (there are other options as well) then write and quit with :wq  
+After running this command, it'll ask you what to do with commits. In order to make changes you need to use a vi like editor and change pick or squash (there are other options as well) then you can write and quit with :wq.  
 
 ## sample : 
 pick 01d1124 Adding license
