@@ -39,3 +39,39 @@ squash ebfd367 Jekyll has become self-aware.
 ```
 git commit --amend
 ```
+
+# Undo published commits with new commits
+
+If you've published the work, you probably don't want to reset the branch, since that's effectively rewriting history. In that case, you could indeed revert the commits. With Git, revert has a very specific meaning: create a commit with the reverse patch to cancel it out. This way you don't rewrite any history.
+
+This will create three separate revert commits:
+```
+git revert a867b4af 25eee4ca 0766c053
+```
+
+It also takes ranges. This will revert the last two commits:
+```
+git revert HEAD~2..HEAD
+```
+
+Similarly, you can revert a range of commits using commit hashes:
+```
+git revert a867b4af..0766c053 
+```
+
+Reverting a merge commit
+```
+git revert -m 1 <merge_commit_sha>
+```
+
+To get just one, you could use `rebase -i` to squash them afterwards
+Or, you could do it manually (be sure to do this at top level of the repo)
+get your index and work tree into the desired state, without changing HEAD:
+```
+git checkout 0d1d7fc32 .
+```
+
+Then commit. Be sure and write a good message describing what you just did
+```
+git commit
+```
