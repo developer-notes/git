@@ -75,3 +75,20 @@ Then commit. Be sure and write a good message describing what you just did
 ```
 git commit
 ```
+
+# Remote related commands
+```
+git remote -v
+```
+
+```
+git remote add [name] [url]
+```
+
+```
+git remote remove [name]
+```
+
+```
+git remote rename [old name] [new name]
+```
