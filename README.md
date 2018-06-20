@@ -40,6 +40,12 @@ squash ebfd367 Jekyll has become self-aware.
 git commit --amend
 ```
 
+# to allow empty commits
+```
+git commit --allow-empty -m "some comment"
+```
+
+
 # Undo published commits with new commits
 
 If you've published the work, you probably don't want to reset the branch, since that's effectively rewriting history. In that case, you could indeed revert the commits. With Git, revert has a very specific meaning: create a commit with the reverse patch to cancel it out. This way you don't rewrite any history.
