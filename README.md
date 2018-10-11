@@ -116,3 +116,20 @@ git remote remove [name]
 ```
 git remote rename [old name] [new name]
 ```
+## Setting your Git username for every repository on your computer
+### 
+```
+to set
+git config --global user.name "Mona Lisa"
+to check
+git config --global user.name
+```
+## Setting your Git username for a single repository
+```
+to set
+git config user.name "Mona Lisa"
+to check
+git config user.name
+```
+### 
+
