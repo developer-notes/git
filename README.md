@@ -16,6 +16,11 @@ git fetch origin
 git reset --hard origin/master
 ```
 
+# undoes the commit and leaves the changes you committed unstaged (so they'll appear as "Changes not staged for commit" in git status, and you'll need to add them again before committing)
+```
+git reset HEAD~
+```
+
 # merge master branch with feature branch
 ```
 git checkout master
