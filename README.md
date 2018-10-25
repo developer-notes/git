@@ -1,6 +1,9 @@
 # git
 Some useful practical notes on git :+1:
 
+The public keys should be generated and stored at git settings. 
+It authenticates the computer against the repo.
+
 # create branch with existing changes
 ```
 git add .
@@ -14,6 +17,16 @@ git push --set-upstream origin {feature-branch}
 ```
 git fetch origin
 git reset --hard origin/master
+```
+# undoes the commit and leaves the changes you committed unstaged (so they'll appear as "Changes not staged for commit" in git status, and you'll need to add them again before committing)
+```
+git reset HEAD~
+```
+
+# Git rebase solves the same problem than git merge. Merging is nice because is a non destructive operation. Never do rebase on a public branch. Rebasing moves the commits of your feature branch to begin on the tip of the master branch. You can rebase the feature branch onto master branch using the following commands
+```
+git checkout feature
+git rebase master
 ```
 
 # undoes the commit and leaves the changes you committed unstaged 
